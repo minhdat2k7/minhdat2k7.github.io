@@ -101,5 +101,21 @@ input:focus {
     text-decoration: none; 
     font-weight: 600; 
 }
-
+.btn-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
+    background: #1e1e1e;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.btn-social img {
+    width: 24px;            
+    height: 24px;           
+    object-fit: contain;    
+    display: block;         
+}
     
