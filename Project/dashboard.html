@@ -2,123 +2,19 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng Điều Khiển - Hệ Thống</title>
-    <style>
-        :root {
-            --primary-blue: #1877f2;
-            --bg-gray: #f0f2f5;
-            --white: #ffffff;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background-color: aqua;
-        }
-
-        /* Responsive Navbar with Flexbox */
-        nav {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .logo { font-size: 1.5rem; font-weight: bold; }
-
-        .user-info { display: flex; align-items: center; gap: 15px; }
-
-        button#btnLogout {
-            background: #e74c3c;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button#btnLogout:hover { background: #c0392b; }
-
-        /* Main Content */
-        main {
-            padding: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .welcome-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        /* Responsive: Mobile Friendly */
-        @media (max-width: 600px) {
-            nav { flex-direction: column; gap: 10px; text-align: center; }
-            main { padding: 1rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Bảng điều khiển</title>
 </head>
 <body>
-
-    <nav>
-        <div class="logo">MySystem</div>
-        <div class="user-info">
-            <span id="displayUser">Đang tải...</span>
-            <button id="btnLogout">Đăng xuất</button>
+    <div class="card">
+        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00f2fe, #fb00ff); border-radius: 50%; margin: 0 auto 20px;"></div>
+        <h2>Bảng điều khiển</h2>
+        <p>Bạn đã đăng nhập thành công!</p>
+        <div style="background: #1e1e1e; padding: 15px; border-radius: 10px; margin-bottom: 25px; text-align: left;">
+            <div style="font-size: 13px; color: #888;">Trạng thái hệ thống:</div>
+            <div style="color: #00f2fe; font-weight: 600;">• Đang hoạt động</div>
         </div>
-    </nav>
-
-    <main>
-        <article class="welcome-card">
-            <h1>Chào mừng bạn đã quay trở lại!</h1>
-            <p>Đây là khu vực dành riêng cho thành viên đã đăng nhập thành công.</p>
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-            <div id="stats">
-                <p>Trạng thái hệ thống: <strong>Hoạt động</strong></p>
-                <p>Ngày hôm nay: <span id="currentDate"></span></p>
-            </div>
-        </article>
-    </main>
-
-    <script>
-        /**
-         * TIÊU CHUẨN BẢO MẬT: Kiểm tra trạng thái đăng nhập
-         */
-        document.addEventListener('DOMContentLoaded', () => {
-            const isLoggedIn = localStorage.getItem('isLoggedIn');
-            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
-            // Nếu chưa đăng nhập -> Đẩy về trang Login
-            if (!isLoggedIn || isLoggedIn !== 'true') {
-                alert("Vui lòng đăng nhập để tiếp tục!");
-                window.location.href = 'login.html';
-                return;
-            }
-
-            // Hiển thị email người dùng
-            document.getElementById('displayUser').innerText = `Xin chào, ${currentUser.email}`;
-            document.getElementById('currentDate').innerText = new Date().toLocaleDateString('vi-VN');
-        });
-
-        /**
-         * XỬ LÝ ĐĂNG XUẤT
-         */
-        document.getElementById('btnLogout').addEventListener('click', () => {
-            if(confirm("Bạn có chắc chắn muốn đăng xuất?")) {
-                // Xóa trạng thái đăng nhập nhưng giữ lại danh sách users
-                localStorage.removeItem('isLoggedIn');
-                localStorage.removeItem('currentUser');
-                window.location.href = 'login.html';
-            }
-        });
-    </script>
+        <a href="login.html" class="btn-main" style="background: #333;">Đăng xuất</a>
+    </div>
 </body>
 </html>

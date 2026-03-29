@@ -2,171 +2,23 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Ký Hệ Thống</title>
-    <style>
-        /* CSS3: Reset & Variables */
-        :root {
-            --primary-color: #42b72a;
-            --error-color: #e74c3c;
-            --text-color: #333;
-            --bg-color: #f0f2f5;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* Responsive Layout with Flexbox */
-        main {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 400px;
-            margin: 15px;
-        }
-
-        header h2 { text-align: center; color: var(--text-color); margin-bottom: 1.5rem; }
-
-        .form-group { margin-bottom: 1rem; position: relative; }
-
-        label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px; }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-            transition: border 0.3s;
-        }
-
-        input:focus { border-color: var(--primary-color); outline: none; }
-
-        input.invalid { border-color: var(--error-color); }
-
-        /* Validation Message Styling */
-        .msg { font-size: 12px; margin-top: 4px; display: block; min-height: 16px; }
-        .error { color: var(--error-color); }
-        .success { color: var(--primary-color); }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-
-        button:disabled { background-color: #ccc; cursor: not-allowed; }
-
-        footer { text-align: center; margin-top: 1rem; font-size: 14px; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Đăng ký tài khoản</title>
 </head>
 <body>
-
-<main>
-    <header>
-        <h2>Đăng Ký Tài Khoản</h2>
-    </header>
-
-    <section>
-        <form id="regForm">
-            <div class="form-group">
-                <label for="regEmail">Email</label>
-                <input type="email" id="regEmail" placeholder="example@gmail.com" required>
-                <span id="emailMsg" class="msg"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="regPass">Mật khẩu</label>
-                <input type="password" id="regPass" placeholder="Tối thiểu 8 ký tự (chữ & số)" required>
-                <span id="passMsg" class="msg"></span>
-            </div>
-
-            <button type="submit" id="btnSubmit" disabled>Đăng ký ngay</button>
-        </form>
-    </section>
-
-    <footer>
-        Đã có tài khoản? <a href="login.html">Đăng nhập</a>
-    </footer>
-</main>
-
-<script>
-    /**
-     * JavaScript: Form Validation & LocalStorage Logic
-     */
-    const regForm = document.getElementById('regForm');
-    const emailInp = document.getElementById('regEmail');
-    const passInp = document.getElementById('regPass');
-    const btnSubmit = document.getElementById('btnSubmit');
-
-    const validationState = { email: false, pass: false };
-
-    // 1. Realtime Validation cho Email
-    emailInp.addEventListener('input', () => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const isValid = emailRegex.test(emailInp.value);
-        updateUI('emailMsg', emailInp, isValid, "Email hợp lệ", "Định dạng email sai");
-        validationState.email = isValid;
-        toggleButton();
-    });
-
-    // 2. Realtime Validation cho Password (8+ ký tự, 1 chữ, 1 số)
-    passInp.addEventListener('input', () => {
-        const passRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-        const isValid = passRegex.test(passInp.value);
-        updateUI('passMsg', passInp, isValid, "Mật khẩu mạnh", "Cần 8+ ký tự, gồm chữ và số");
-        validationState.pass = isValid;
-        toggleButton();
-    });
-
-    function updateUI(msgId, inputEl, isValid, successText, errorText) {
-        const msgEl = document.getElementById(msgId);
-        if (inputEl.value === "") {
-            msgEl.innerText = "";
-            inputEl.classList.remove('invalid');
-            return;
-        }
-        msgEl.innerText = isValid ? successText : errorText;
-        msgEl.className = `msg ${isValid ? 'success' : 'error'}`;
-        isValid ? inputEl.classList.remove('invalid') : inputEl.classList.add('invalid');
-    }
-
-    function toggleButton() {
-        btnSubmit.disabled = !(validationState.email && validationState.pass);
-    }
-
-    // 3. Xử lý lưu LocalStorage
-    regForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-        
-        if (users.find(u => u.email === emailInp.value)) {
-            alert("Email này đã tồn tại trên hệ thống!");
-            return;
-        }
-
-        users.push({ email: emailInp.value, password: passInp.value });
-        localStorage.setItem('users', JSON.stringify(users));
-        
-        alert("Đăng ký thành công! Chuyển đến trang đăng nhập.");
-        window.location.href = 'login.html';
-    });
-</script>
+    <div class="card">
+        <h2>Đăng ký</h2>
+        <p>Email hoặc Số điện thoại</p>
+        <input type="text" placeholder="Nhập Email/SĐT">
+        <div class="otp-group">
+            <input type="text" placeholder="Nhập mã OTP">
+            <button class="btn-otp">Gửi mã</button>
+        </div>
+        <input type="password" placeholder="Mật khẩu">
+        <a href="login.html" class="btn-main">Đăng ký</a>
+        <div class="link-switch">
+            Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a>
+        </div>
+    </div>
 </body>
 </html>
