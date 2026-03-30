@@ -77,7 +77,7 @@ input:focus {
 
 .otp-group { 
     display: flex; 
-    gap: 10px; 
+    gap: 5px; 
 }
 .btn-otp {
     background: #282828;
@@ -90,6 +90,19 @@ input:focus {
     font-size: 12px;
     white-space: nowrap;
 }
+.btn-main {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00f2fe 0%, #fb00ff 100%);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-main:hover { transform: scale(1.02); }
 
 .link-switch { 
     margin-top: 20px; 

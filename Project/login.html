@@ -4,29 +4,62 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Đăng nhập</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
 </head>
 <body>
     <div class="card">
-        <h2>Chào mừng trở lại</h2>
-        <p>Vui lòng đăng nhập để tiếp tục</p>
+        <h2>Đăng nhập</h2>
+        <p>Vui lòng đăng nhập để tiếp tục</p>     
+        <p id="error-msg" style="color: #ff4d4d; display: none; font-size: 13px; margin-bottom: 10px;">Thông tin không chính xác!</p>
+         <input type="text" id="login_user" placeholder="Email hoặc Số điện thoại">
+        <input type="password" id="login_pass" placeholder="Mật khẩu">
         
-        <input type="text" placeholder="Email hoặc Số điện thoại">
-        <input type="password" placeholder="Mật khẩu">
-        
-        <a href="dashboard.html" class="btn-main">Đăng nhập</a>
-
+        <button type="button" class="btn-main" onclick="handleLogin()">Đăng nhập</button>
+ 
         <div class="divider">Hoặc tiếp tục với</div>
 
+        
         <div class="social-group">
-            <button class="btn-social"><img src="https://cdn-icons-png.flaticon.com"></button>
-            <button class="btn-social"><img src="https://cdn-icons-png.flaticon.com"></button>
-            <button class="btn-social"><img src="https://cdn-icons-png.flaticon.com"></button>
+    
+    <a href="https://accounts.google.com" target="_blank" class="btn-social">
+    <img src="app/google.png" alt="Google">
+    <span>Google</span>
+    </a>
+
+    <a href="https://www.facebook.com" target="_blank" class="btn-social">
+        <img src="app/facebook.png" alt="Facebook">
+        <span>Facebook</span>
+    </a>
+    
+    <a href="https://www.tiktok.com" target="_blank" class="btn-social">
+        <img src="app/tiktok.png" alt="TikTok">
+        <span>TikTok</span>
+    </a>
         </div>
 
         <div class="link-switch">
             Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a>
         </div>
     </div>
+    <script>
+     function handleLogin() {
+            const userInput = document.getElementById('login_user').value; 
+            const passInput = document.getElementById('login_pass').value;
+
+            // LẤY DỮ LIỆU TỪ BỘ NHỚ
+            const sEmail = localStorage.getItem('storedEmail');
+            const sPhone = localStorage.getItem('storedPhone');
+            const sPass = localStorage.getItem('storedPass');
+
+            if ((userInput === sEmail || userInput === sPhone) && passInput === sPass) {
+                alert("Đăng nhập thành công!");
+                window.location.href = "dashboard.html"; 
+            } else {
+                document.getElementById('error-msg').style.display = 'block';
+                alert("Email/SĐT hoặc Mật khẩu không đúng!");
+            }
+        }
+    </script>
 </body>
 </html>
 

@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Bảng điều khiển</title>
+    <title>Dashboard</title>
 </head>
 <body>
     <div class="card">
-        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00f2fe, #fb00ff); border-radius: 50%; margin: 0 auto 20px;"></div>
-        <h2>Bảng điều khiển</h2>
-        <p>Bạn đã đăng nhập thành công!</p>
+         <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00f2fe, #fb00ff); border-radius: 50%; margin: 0 auto 20px;"></div>
+        <h2 id="welcome_msg">Xin chào!</h2>
+        <p>Chào mừng bạn đã đăng nhập thành công.</p>
         <div style="background: #1e1e1e; padding: 15px; border-radius: 10px; margin-bottom: 25px; text-align: left;">
             <div style="font-size: 13px; color: #888;">Trạng thái hệ thống:</div>
             <div style="color: #00f2fe; font-weight: 600;">• Đang hoạt động</div>
         </div>
-        <a href="login.html" class="btn-main" style="background: #333;">Đăng xuất</a>
+        <button class="btn-main" onclick="location.href='login.html'" style="background: #333;">Đăng xuất</button>
     </div>
+    <script>
+        const name = localStorage.getItem('storedName');
+        if(name) document.getElementById('welcome_msg').innerText = "Chào mừng, " + name + "!";
+    </script>
 </body>
 </html>
