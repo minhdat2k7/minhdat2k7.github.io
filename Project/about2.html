@@ -396,9 +396,10 @@
         </div>
     </div>
    
-    <footer class="mt-20 py-16 px-6">
+  <footer class="mt-20 py-16 px-6">
     <div class="max-w-[1400px] mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
             <div class="space-y-6">
                 <h1 class="text-4xl font-black text-blue-500 tracking-tighter">Elysium</h1>
                 <p class="text-sm text-gray-500 font-medium leading-relaxed">
@@ -411,40 +412,93 @@
                     <a href="#" class="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-500 hover:text-white transition-all transform hover:scale-110"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
-           <div>
-    <h4 class="text-xs font-black uppercase tracking-widest mb-8 text-gray-900 border-l-4 border-blue-500 pl-4">Liên kết nhanh</h4>
-    <ul class="space-y-4 text-sm font-bold text-gray-500">
-        <li>
-            <a href="index.html" class="hover:text-blue-500 transition flex items-center">
-                <i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Trang chủ
-            </a>
-        </li>
-        <li>
-            <a href="calendar.html" class="hover:text-blue-500 transition flex items-center">
-                <i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Lịch
-            </a>
-        </li>
-        <li>
-            <a href="about.html" class="hover:text-blue-500 transition flex items-center">
-                <i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Về chúng tôi
-            </a>
-        </li>
-        <li>
-            <a href="contact.html" class="hover:text-blue-500 transition flex items-center">
-                <i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Hỗ trợ
-            </a>
-        </li>
-    </ul>
-</div>
-  <div>
+
+            <div>
+                <h4 class="text-xs font-black uppercase tracking-widest mb-8 text-gray-900 border-l-4 border-blue-500 pl-4">Liên kết nhanh</h4>
+                <ul class="space-y-4 text-sm font-bold text-gray-500">
+                    <li>
+                        <a href="index.html" class="hover:text-blue-500 transition flex items-center">
+                            <i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="calendar.html" class="hover:text-blue-500 transition flex items-center">
+                            <i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Lịch
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="hover:text-blue-500 transition flex items-center">
+                            <i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Về chúng tôi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:text-blue-500 transition flex items-center">
+                            <i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Hỗ trợ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
                 <h4 class="text-xs font-black uppercase tracking-widest mb-8 text-gray-900 border-l-4 border-blue-500 pl-4">Trung tâm hỗ trợ</h4>
                 <ul class="space-y-4 text-sm font-bold text-gray-500">
                     <li><a href="#" class="hover:text-blue-500 transition flex items-center"><i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Điều khoản sử dụng</a></li>
                     <li><a href="#" class="hover:text-blue-500 transition flex items-center"><i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Chính sách bảo mật</a></li>
                     <li><a href="#" class="hover:text-blue-500 transition flex items-center"><i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Câu hỏi thường gặp</a></li>
                     <li><a href="#" class="hover:text-blue-500 transition flex items-center"><i class="fa-solid fa-chevron-right text-[10px] mr-2"></i>Quy trình hoàn tiền</a></li>
-                </ul>
-            </div>
+                    <li>
+            <button onclick="openDocModal('https://docs.google.com/document/d/1fN2WR16lEjpwNBvv8l93v5WrWzHpOOT0m9MKvBV14ZQ/preview')" class="group flex items-center hover:text-blue-500 transition-colors duration-300 text-left">
+                <i class="fa-solid fa-chevron-right text-[10px] mr-2 text-gray-300 group-hover:text-blue-500 transition-colors"></i>
+                <span>Điều khoản sử dụng cho khách hàng</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openDocModal('https://docs.google.com/document/d/1IX9xZghIf8AB9z9JYyAmEIJgy192QkqYoRjrOzvIAkM/preview')" class="group flex items-center hover:text-blue-500 transition-colors duration-300 text-left">
+                <i class="fa-solid fa-chevron-right text-[10px] mr-2 text-gray-300 group-hover:text-blue-500 transition-colors"></i>
+                <span>Điều khoản sử dụng cho nhà tổ chức sự kiện</span>
+            </button>
+        </li>
+    </ul>
+</div>
+
+<div id="docModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50 p-4">
+    <div class="relative w-full max-w-4xl h-[90vh] bg-white rounded-lg shadow-2xl flex flex-col">
+        <button onclick="closeDocModal()" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl z-10">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <iframe id="docFrame" src="" class="w-full h-full rounded-lg" frameborder="0"></iframe>
+    </div>
+</div>
+<script>
+function openDocModal(url) {
+    const modal = document.getElementById('docModal');
+    const iframe = document.getElementById('docFrame');
+    
+    iframe.src = url; // Gán link vào iframe
+    modal.classList.remove('hidden'); // Hiện modal
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden'; // Chặn cuộn trang web bên dưới
+}
+
+function closeDocModal() {
+    const modal = document.getElementById('docModal');
+    const iframe = document.getElementById('docFrame');
+    
+    modal.classList.add('hidden'); // Ẩn modal
+    modal.classList.remove('flex');
+    iframe.src = ''; // Xóa link để dừng load ngầm
+    document.body.style.overflow = 'auto'; // Cho phép cuộn lại
+}
+
+// Đóng khi click ra ngoài vùng trắng của modal
+window.onclick = function(event) {
+    const modal = document.getElementById('docModal');
+    if (event.target == modal) {
+        closeDocModal();
+    }
+}
+</script>
+
             <div>
                 <h4 class="text-xs font-black uppercase tracking-widest mb-8 text-gray-900 border-l-4 border-blue-500 pl-4">Thông tin liên hệ</h4>
                 <p class="text-3xl font-black text-blue-500 mb-2 tracking-tighter">1900.6408</p>
@@ -462,41 +516,50 @@
             </div>
         </div>
 
-  <div>
-    <h4 class="text-xs font-black uppercase tracking-widest mb-8 text-gray-900 border-l-4 border-blue-500 pl-4">
-        Trung tâm hỗ trợ
-    </h4>
-    
-    <div class="space-y-8">
-        <div class="space-y-3">
-            <p class="text-[11px] font-black text-gray-400 uppercase tracking-wider">
-                Dành cho Khách hàng
-            </p>
-            <ul class="space-y-3 text-sm font-bold text-gray-500">
-                <li>
-                    <button onclick="openLegalModal('khach-hang')" class="group flex items-center hover:text-blue-500 transition-colors duration-300 text-left">
-                        <i class="fa-solid fa-chevron-right text-[10px] mr-3 text-gray-300 group-hover:text-blue-500 transition-colors"></i>
-                        <span>Điều khoản sử dụng cho khách hàng</span>
-                    </button>
-                </li>
-            </ul>
-        </div>
 
-        <div class="space-y-3">
-            <p class="text-[11px] font-black text-gray-400 uppercase tracking-wider">
-                Dành cho Ban tổ chức
-            </p>
-            <ul class="space-y-3 text-sm font-bold text-gray-500">
-                <li>
-                    <button onclick="openLegalModal('btc')" class="group flex items-center hover:text-blue-500 transition-colors duration-300 text-left">
-                        <i class="fa-solid fa-chevron-right text-[10px] mr-3 text-gray-300 group-hover:text-blue-500 transition-colors"></i>
-                        <span>Điều khoản sử dụng cho ban tổ chức</span>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+    <style>
+        @keyframes gradient-x { 0%, 100% { background-position: left center; } 50% { background-position: right center; } }
+        .animate-gradient-x { background-size: 200% 200%; animation: gradient-x 4s ease infinite; }
+        #legalModal.active { display: flex; opacity: 1; }
+        #legalModal.active #modalContent { transform: scale(1); opacity: 1; }
+    </style>
+
+    <script>
+        function openDocModal(url) {
+            const modal = document.getElementById('docModal');
+            const iframe = document.getElementById('docFrame');
+            iframe.src = url;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeDocModal() {
+            const modal = document.getElementById('docModal');
+            const iframe = document.getElementById('docFrame');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            iframe.src = '';
+            document.body.style.overflow = 'auto';
+        }
+        function openLegalModal() {
+            const modal = document.getElementById('legalModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.add('active'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLegalModal() {
+            const modal = document.getElementById('legalModal');
+            modal.classList.remove('active');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(e) {
+            if (e.target.id === 'legalModal') closeLegalModal();
+            if (e.target.id === 'docModal') closeDocModal();
+        }
+    </script>
+
+    
 
 <div class="pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
     <div class="flex flex-col items-center md:items-start gap-3">
@@ -583,8 +646,6 @@
 </script>
     </div>
 </footer>
-
-
 
     <script>
         // DATA TV
