@@ -1,0 +1,23 @@
+
+# EXPERIMENT RESULTS
+
+Thư mục lưu trữ kết quả thực nghiệm của công cụ mô phỏng.
+
+## Expected Files
+
+- simulation_results.csv: Kết quả mô phỏng.
+- scenario_comparison.csv: Kết quả so sánh kịch bản.
+- user_testing_results.xlsx: Kết quả thử nghiệm người dùng.
+- simulation_chart.png: Biểu đồ mô phỏng.
+- scenario_chart.png: Biểu đồ so sánh.
+
+## Evaluation
+
+Đánh giá kết quả dựa trên:
+
+1. Độ chính xác tính toán.
+2. Khả năng mô phỏng các kịch bản.
+3. Khả năng đạt mục tiêu tiết kiệm.
+4. Phản hồi từ người dùng thử.
+
+Chỉ lưu kết quả thực tế sau khi chương trình được chạy.

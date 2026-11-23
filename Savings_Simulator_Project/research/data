@@ -1,0 +1,22 @@
+
+# RESEARCH DATA
+
+Thư mục lưu trữ dữ liệu phục vụ nghiên cứu.
+
+## Files
+
+| File | Description |
+|---|---|
+| mau_sach.dta | Bộ dữ liệu khảo sát Stata |
+| survey_data.xlsx | Dữ liệu khảo sát dạng Excel |
+| data_dictionary.xlsx | Bảng giải thích các biến |
+
+## Data Processing
+
+1. Kiểm tra dữ liệu.
+2. Xử lý dữ liệu thiếu.
+3. Kiểm tra giá trị bất thường.
+4. Phân tích thống kê mô tả.
+5. Chuẩn bị dữ liệu phục vụ mô phỏng.
+
+Lưu ý: Chỉ bổ sung những file thực tế được sử dụng trong nghiên cứu.

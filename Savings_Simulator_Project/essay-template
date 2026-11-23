@@ -1,0 +1,82 @@
+
+# BÁO CÁO NGHIÊN CỨU
+
+# THIẾT KẾ CÔNG CỤ MÔ PHỎNG KẾ HOẠCH TIẾT KIỆM CHO SINH VIÊN
+
+## CHƯƠNG 1. GIỚI THIỆU ĐỀ TÀI
+
+### 1.1. Lý do chọn đề tài
+
+### 1.2. Mục tiêu nghiên cứu
+
+### 1.3. Đối tượng nghiên cứu
+
+### 1.4. Phạm vi nghiên cứu
+
+### 1.5. Câu hỏi nghiên cứu
+
+## CHƯƠNG 2. CƠ SỞ LÝ THUYẾT VÀ TỔNG QUAN NGHIÊN CỨU
+
+### 2.1. Khái niệm tiết kiệm
+
+### 2.2. Quản lý tài chính cá nhân
+
+### 2.3. Hành vi tiết kiệm của sinh viên
+
+### 2.4. Các mô hình tính toán tiết kiệm
+
+### 2.5. Các nghiên cứu liên quan
+
+## CHƯƠNG 3. DỮ LIỆU VÀ PHƯƠNG PHÁP NGHIÊN CỨU
+
+### 3.1. Nguồn dữ liệu
+
+### 3.2. Phương pháp thu thập dữ liệu
+
+### 3.3. Phân tích dữ liệu khảo sát
+
+### 3.4. Xây dựng mô hình toán học
+
+### 3.5. Phương pháp mô phỏng
+
+## CHƯƠNG 4. THIẾT KẾ VÀ XÂY DỰNG CÔNG CỤ
+
+### 4.1. Yêu cầu công cụ
+
+### 4.2. Thiết kế đầu vào và đầu ra
+
+### 4.3. Xây dựng công thức tính toán
+
+### 4.4. Lập trình bằng Python
+
+### 4.5. Thiết kế giao diện Streamlit
+
+## CHƯƠNG 5. THỰC NGHIỆM VÀ ĐÁNH GIÁ
+
+### 5.1. Thiết lập các kịch bản
+
+### 5.2. Kết quả mô phỏng
+
+### 5.3. So sánh các phương án
+
+### 5.4. Thử nghiệm với người dùng
+
+### 5.5. Đánh giá và thảo luận kết quả
+
+## CHƯƠNG 6. KẾT LUẬN VÀ KIẾN NGHỊ
+
+### 6.1. Kết quả đạt được
+
+### 6.2. Hạn chế của đề tài
+
+### 6.3. Hướng phát triển
+
+## TÀI LIỆU THAM KHẢO
+
+## PHỤ LỤC
+
+- Mã nguồn chương trình.
+- Bảng dữ liệu khảo sát.
+- Hình ảnh giao diện.
+- Kết quả thực nghiệm.
+- Phiếu đánh giá người dùng.
